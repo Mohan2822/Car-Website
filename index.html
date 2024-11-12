@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Modal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+  </head>
+</head>
+<body>
+    <!--Nav bar -->
+    <header class="p-3 text-bg-dark">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                    <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
+                </a>
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                    <li><a href="#" class="nav-link px-2 text-secondary">Home</a></li>
+                    <li><a href="#" class="nav-link px-2 text-white">Features</a></li>
+                    <li><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
+                    <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
+                    <li><a href="#" class="nav-link px-2 text-white">About</a></li>
+                </ul>
+                <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+                  <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Search..." aria-label="Search">
+                </form>
+                <div class="text-end">
+                    <button type="button" class="btn btn-outline-light me-2" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
+                    <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#signupModal">Sign-up</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="loginEmail" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="loginEmail" placeholder="Email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="loginPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="loginPassword" placeholder="Password" required>
+                        </div>
+                        <div class="form-check mb-3">
+                            <input type="checkbox" class="form-check-input" id="rememberMe">
+                            <label class="form-check-label" for="rememberMe">Remember me</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Login</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+ <!-- Sign-Up Modal -->
+ <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="signupModalLabel">Sign Up</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="signupName" class="form-label">Full Name</label>
+                        <input type="text" class="form-control" id="signupName" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="signupEmail" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="signupEmail" placeholder="Email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="signupPassword" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="signupPassword" placeholder="Password" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="signupConfirmPassword" class="form-label">Confirm Password</label>
+                        <input type="password" class="form-control" id="signupConfirmPassword" placeholder="Confirm password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Sign Up</button>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--carouse-->
+<div id="carouselExampleIndicators" class="carousel slide">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="img/cover_d.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="img/herod.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="img/apple_vision_cover.jpg" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<!--Heroes Section-->
+<div class="container col-xxl-8 px-4 py-5">
+  <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+    <div class="col-10 col-sm-8 col-lg-6">
+      <img src="img/H4sIAAAAAAAAAC2Vza7dNBDHT1u1VEi0AoQQL3CFhMTkOzmLK9SqOzYsEAu6uJokduwTJ3FsJ7knD8Sqb8SGBygrNmyQ-OeAZM3vZL4yHo9PPvx5er6407P379_--M83X3Xd7-XT0-nRnk6nJ9A_ff_2w19f__3i5c9__K9-8dvpeVhcPT2By69PP9UDd.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+    </div>
+    <div class="col-lg-6">
+      <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3 ">Drive Your Dream with Precision and Power</h1>
+      <p class="lead">Experience the thrill of unmatched performance and cutting-edge technology. Our cars are engineered to elevate every drive, from city streets to open highways.Step into a world where luxury meets unparalleled power. Discover our latest models, crafted for those who demand excellence on the road.</p>
+      <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+        <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Read More</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Features Section-->
+<div class="container px-4 py-5" id="custom-cards">
+  <h2 class="pb-2 border-bottom">Custom cards</h2>
+
+  <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+    <div class="col">
+      <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('img/revuelto.jpg'); background-size: cover;">
+        <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+          <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Style Meets Substance.</h3>
+          <ul class="d-flex list-unstyled mt-auto">
+            <li class="me-auto">
+              <img src="img/670e179521404600566636d2-ferrari-f80-photo-reveal-website-desk.avif" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+            </li>
+            <li class="d-flex align-items-center me-3">
+              <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"></use></svg>
+              <small>Earth</small>
+            </li>
+            <li class="d-flex align-items-center">
+              <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"></use></svg>
+              <small>3d</small>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('img/temerario.jpg');">
+        <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+          <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Experience Unrivaled Craftsmanship and Lasting Quality in Every Detail.</h3>
+          <ul class="d-flex list-unstyled mt-auto">
+            <li class="me-auto">
+              <img src="img/cover.jpg" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+            </li>
+            <li class="d-flex align-items-center me-3">
+              <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"></use></svg>
+              <small>Pakistan</small>
+            </li>
+            <li class="d-flex align-items-center">
+              <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"></use></svg>
+              <small>4d</small>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('img/family_chooser_sterrato.jpg'); background-size: cover;">
+        <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+          <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Timeless Elegance and Unmatched Comfort for Every Occasion.</h3>
+          <ul class="d-flex list-unstyled mt-auto">
+            <li class="me-auto">
+              <img src="img/533702.jpg" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+            </li>
+            <li class="d-flex align-items-center me-3">
+              <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"></use></svg>
+              <small>California</small>
+            </li>
+            <li class="d-flex align-items-center">
+              <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"></use></svg>
+              <small>5d</small>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--product heading-->
+<div class="section-header px-4 py-5 my-5 text-center text-bg-dark">
+  <h6 text-body-secondary>Checkout the Featured Cars</h6>
+  <h1>Featured Cars</h1>
+</div>
+
+
+<!--product card-->
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6 col-lg-4 col-xxl-3 my-5">
+          <div class="card" style="width: 18rem;">
+            <img src="img/fc1.png" class="card-img-top" alt="..." height="150px">
+            <div class="card-body">
+              <h5 class="card-title">BMW 6-Series Gran Coupe</h5>
+              <h6>$89,395</h6>
+              <p class="card-text">A luxury coupe with sleek design, powerful performance, advanced technology, and a spacious, comfortable interior—ideal for premium driving experiences.</p>
+              <a href="#" class="btn btn-primary"><i class="fa-solid fa-cart-plus"></i>Add to Cart</a>
+              <a href="#" class="btn btn-primary"><i class="fa-solid fa-cart-shopping"></i>Buy Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4 col-xxl-3 my-5">
+          <div class="card" style="width: 18rem;">
+            <img src="img/fc2.png" class="card-img-top" alt="..."  height="150px">
+            <div class="card-body">
+              <h5 class="card-title">Chevrolet Camaro WMV20</h5>
+              <h6>$62,575</h6>
+              <p class="card-text">A powerful sports car with bold design, advanced tech, and excellent handling—perfect for thrill-seekers and driving enthusiasts.</p>
+              <a href="#" class="btn btn-primary"><i class="fa-solid fa-cart-plus"></i>Add to Cart</a>
+              <a href="#" class="btn btn-primary"><i class="fa-solid fa-cart-shopping"></i>Buy Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4 col-xxl-3 my-5">
+          <div class="card" style="width: 18rem;">
+            <img src="img/images (1).jpg" class="card-img-top" alt="..." height="150px" >
+            <div class="card-body">
+                <h5 class="card-title">Lamborghini V520</h5>
+                <h6>$125,250</h6>
+              <p class="card-text">A stunning high-performance sports car with an iconic design, advanced engineering, and exceptional speed—crafted for those who crave excitement.</p>
+              <a href="#" class="btn btn-primary"><i class="fa-solid fa-cart-plus"></i>Add to Cart</a>
+              <a href="#" class="btn btn-primary"><i class="fa-solid fa-cart-shopping"></i>Buy Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4 col-xxl-3 my-5">
+          <div class="card" style="width: 18rem;">
+            <img src="img/fc4.png" class="card-img-top" alt="..."  height="150px">
+            <div class="card-body">
+              <h5 class="card-title">Audi A3 Sedanh</h5>
+              <h6>$95,500</h6>
+              <p class="card-text">A stylish and compact luxury sedan featuring advanced technology, refined performance, and a comfortable interior—ideal for modern, sophisticated driving.</p>
+              <a href="#" class="btn btn-primary"><i class="fa-solid fa-cart-plus"></i>Add to Cart</a>
+              <a href="#" class="btn btn-primary"><i class="fa-solid fa-cart-shopping"></i>Buy Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4 col-xxl-3 my-5">
+          <div class="card" style="width: 18rem;">
+            <img src="img/fc5.png" class="card-img-top" alt="..."  height="150px">
+            <div class="card-body">
+              <h5 class="card-title">Infiniti Z5</h5>
+              <h6>$36,850</h6>
+              <p class="card-text">A sleek luxury sedan combining elegant design, advanced features, and smooth performance, offering a comfortable and refined driving experience.</p>
+              <a href="#" class="btn btn-primary"><i class="fa-solid fa-cart-plus"></i>Add to Cart</a>
+              <a href="#" class="btn btn-primary"><i class="fa-solid fa-cart-shopping"></i>Buy Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4 col-xxl-3 my-5">
+          <div class="card" style="width: 18rem;">
+            <img src="img/fc7.png" class="card-img-top" alt="..."  height="150px">
+            <div class="card-body">
+              <h5 class="card-title">Porsche 718 Cayman</h5>
+              <h6>$48,500</h6>
+              <p class="card-text">A dynamic sports car known for its precise handling, powerful engine, and iconic design—perfect for those who value performance and style.</p>
+              <a href="#" class="btn btn-primary"><i class="fa-solid fa-cart-plus"></i>Add to Cart</a>
+              <a href="#" class="btn btn-primary"><i class="fa-solid fa-cart-shopping"></i>Buy Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4 col-xxl-3 my-5">
+          <div class="card" style="width: 18rem;">
+            <img src="img/fc8.png" class="card-img-top" alt="..."  height="150px">
+            <div class="card-body">
+              <h5 class="card-title">BMW 8-Series Coupe</h5>
+              <h6>$56,000</h6>
+              <p class="card-text">A luxurious coupe with striking design, advanced tech, and thrilling performance—perfect for those seeking elegance and power of value.</p>
+              <a href="#" class="btn btn-primary"><i class="fa-solid fa-cart-plus"></i>Add to Cart</a>
+              <a href="#" class="btn btn-primary"><i class="fa-solid fa-cart-shopping"></i>Buy Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4 col-xxl-3 my-5">
+          <div class="card" style="width: 18rem;">
+            <img src="img/ncm1.png" class="card-img-top" alt="..." height="150px" >
+            <div class="card-body">
+              <h5 class="card-title">Chevrolet Camaro ZA100</h5>
+              <h6>$75,800</h6>
+              <p class="card-text">A bold and high-performance sports car that combines aggressive styling with powerful engine options and advanced technology designed for true driving.</p>
+              <a href="#" class="btn btn-primary"><i class="fa-solid fa-cart-plus"></i>Add to Cart</a>
+              <a href="#" class="btn btn-primary"><i class="fa-solid fa-cart-shopping"></i>Buy Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4 col-xxl-3 my-5">
+          <div class="card" style="width: 18rem;">
+            <img src="img/ncm2.png" class="card-img-top" alt="..." height="150px">
+            <div class="card-body">
+              <h5 class="card-title">BMW Series-Wagon</h5>
+              <h6>$75,800</h6>
+              <p class="card-text">A versatile and stylish wagon offering a balance of luxury, performance, and spaciousness. With advanced tech and premium comfort.</p>
+              <a href="#" class="btn btn-primary"><i class="fa-solid fa-cart-plus"></i>Add to Cart</a>
+              <a href="#" class="btn btn-primary"><i class="fa-solid fa-cart-shopping"></i>Buy Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4 col-xxl-3 my-5">
+          <div class="card" style="width: 18rem;">
+            <img src="img/ncm3.png" class="card-img-top" alt="..."  height="150px">
+            <div class="card-body">
+              <h5 class="card-title">Ferrari 488 Superfast</h5>
+              <h6>$75,800</h6>
+              <p class="card-text">A high-performance supercar with a turbocharged V8 engine, exceptional handling, and stunning design—delivering an unmatched driving experien.</p>
+              <a href="#" class="btn btn-primary"><i class="fa-solid fa-cart-plus"></i>Add to Cart</a>
+              <a href="#" class="btn btn-primary"><i class="fa-solid fa-cart-shopping"></i>Buy Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4 col-xxl-3 my-5">
+          <div class="card" style="width: 18rem;">
+            <img src="img/images.jpg" class="card-img-top" alt="..." height="150px">
+            <div class="card-body">
+              <h5 class="card-title">Holden Commodore VE</h5>
+              <h6>$84,800</h6>
+              <p class="card-text">A reliable and spacious sedan offering strong performance, advanced features, and a comfortable ride—ideal for both everyday driving and long trips.</p>
+              <a href="#" class="btn btn-primary"><i class="fa-solid fa-cart-plus"></i>Add to Cart</a>
+              <a href="#" class="btn btn-primary"><i class="fa-solid fa-cart-shopping"></i>Buy Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4 col-xxl-3 my-5">
+          <div class="card" style="width: 18rem;">
+            <img src="img/d27-whats-awesome-547x306.jpg" class="card-img-top" alt="..."  height="150px">
+            <div class="card-body">
+              <h5 class="card-title">Toyota Corolla</h5>
+              <h6>$85,500</h6>
+              <p class="card-text">Toyota offers a wide range of vehicles from reliable sedans to rugged SUVs and high-performance models. Known for durability, fuel efficiency.</p>
+              <a href="#" class="btn btn-primary"><i class="fa-solid fa-cart-plus"></i>Add to Cart</a>
+              <a href="#" class="btn btn-primary"><i class="fa-solid fa-cart-shopping"></i>Buy Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <!--accordion action-->
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+            What is a brand car?
+          </button>
+        </h2>
+        <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">What is a Title Brand? Title brands indicate whether a used vehicle has sustained damage or might be potentially unsafe to drive. If a vehicle's title has been "branded," it is an official designation made by a state agency and should appear on the vehicle's title paperwork.</div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+            How many brand cars are there?
+          </button>
+        </h2>
+        <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">There are more than 100 car brands currently in operation across the world. The global car brand scene is a dynamic mix of established giants and innovative newcomers. Major players like Toyota, BMW, and Ford dominate the market with extensive model ranges and global reach.</div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+            What is luxury brand car?
+          </button>
+        </h2>
+        <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">A luxury car is a car that provides above-average to high-end levels of comfort, features, and equipment. Often, more expensive materials and surface finishes are used, and buyers expect better build quality.
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <!--Footerbar-->
+    <div class="container">
+      <footer class="py-5">
+        <div class="row">
+          <div class="col-6 col-md-2 mb-3">
+            <h5>CARVILLA</h5>
+            <ul class="nav flex-column text-body-secondary">
+            <p>Ased do eiusm tempor incidi ut labore et dolore magnaian aliqua. Ut enim ad minim veniam.</p>
+            <h6><i class="fa-solid fa-envelope"></i>name@domain.com</h6>
+            <h6><i class="fa-solid fa-phone"></i> +91 9123576865</h6>
+          </div>
+    
+          <div class="col-6 col-md-2 mb-3">
+            <h5>ABOUT DEVLOON</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About Us</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Career</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">terms of service</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Privacy policy</a></li>
+            </ul>
+          </div>
+    
+          <div class="col-6 col-md-2 mb-3">
+            <h5>TOP BRANDS</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">BMW</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Lamborghini</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Camaro</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Audi</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Nissan</a></li>
+            </ul>
+          </div>
+    
+          <div class="col-md-5 offset-md-1 mb-3">
+            <form>
+              <h5>Subscribe to our newsletter</h5>
+              <p>Monthly digest of what's new and exciting from us.</p>
+              <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                <label for="newsletter1" class="visually-hidden">Email address</label>
+                <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+                <button class="btn btn-primary" type="button">Subscribe</button>
+              </div>
+            </form>
+          </div>
+        </div>
+    
+        <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+          <p>© 2024 Company, Inc. All rights reserved.</p>
+          <ul class="list-unstyled d-flex">
+            <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
+            <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
+            <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
